@@ -71,11 +71,11 @@ for colCt in colCounts:
         
     dfColAll = pd.concat(dfColCts, ignore_index=True)
     
-    dfColAll.to_csv(colCt[0]+'_start.csv', index=False)
+    dfColAll.to_csv(outputLoc+colCt[0]+'_start.csv', index=False)
     dfDict2[colCt[0]] = dfColAll
 # FIND THE CATEGORIES WITH WAY TOO HIGH NUMBERS, 100636 is one
     # FIGURED IT OUT, just remove 100636 and 372213
-df6 = pd.read_csv('80_start.csv')
+df6 = pd.read_csv(outputLoc+'80_start.csv')
 df6z = df6[df6['unitid'] != 100636]
 df6x = df6z[df6z['unitid'] != 372213]
 df6G = df6x.groupby(['cipcode', 'awlevel', 'year']).sum()
@@ -91,7 +91,7 @@ df6G['year'] = [x[2] for x in dfIdx]
 #totalDegrees = 'crace15' + 'crace16'
 #print(df6.columns)
 #
-df65 = pd.read_csv('11_start.csv')
+df65 = pd.read_csv(outputLoc+'11_start.csv')
 
 df65z = df65[df65['UNITID'] != 100636]
 df65x = df65z[df65z['UNITID'] != 372213]
@@ -104,7 +104,7 @@ df65G['cipcode'] = [x[0] for x in dfIdx]
 df65G['awlevel'] = [x[1] for x in dfIdx]
 df65G['year'] = [x[2] for x in dfIdx]
 
-df53 = pd.read_csv('99_start.csv')
+df53 = pd.read_csv(outputLoc+'99_start.csv')
 df53z = df53[df53['unitid'] != 100636]
 df53x = df53z[df53z['unitid'] != 372213]
 df53G = df53x.groupby(['cipcode', 'awlevel', 'year']).sum()
@@ -116,7 +116,7 @@ df53G['cipcode'] = [x[0] for x in dfIdx]
 df53G['awlevel'] = [x[1] for x in dfIdx]
 df53G['year'] = [x[2] for x in dfIdx]
 
-df39 = pd.read_csv('95_start.csv')
+df39 = pd.read_csv(outputLoc+'95_start.csv')
 df39z = df39[df39['unitid'] != 100636]
 df39x = df39z[df39z['unitid'] != 372213]
 df39G = df39x.groupby(['cipcode', 'awlevel', 'year']).sum()
@@ -129,7 +129,7 @@ df39G['cipcode'] = [x[0] for x in dfIdx]
 df39G['awlevel'] = [x[1] for x in dfIdx]
 df39G['year'] = [x[2] for x in dfIdx]
 
-df125 = pd.read_csv('08_start.csv')
+df125 = pd.read_csv(outputLoc+'08_start.csv')
 df125z = df125[df125['UNITID'] != 100636]
 df125x = df125z[df125z['UNITID'] != 372213]
 df125G = df125x.groupby(['CIPCODE', 'AWLEVEL', 'year']).sum()
@@ -146,4 +146,4 @@ dfsAll = [df6G, df65G, df53G, df39G, df125G]
 
 dfComplete = pd.concat(dfsAll, ignore_index = True)
 
-dfComplete.to_csv('all_degrees_data.csv', index=False)
+dfComplete.to_csv(outputLoc+r'\\IPEDS_data_work\all_degrees_data.csv', index=False)
