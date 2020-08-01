@@ -1,41 +1,47 @@
-family,name
-1,Agriculture
-2,Agriculture - Science Focus
-3,Natural Resources and Environmental Sciences
-4,Architecture
-5,International and Group Studies
-6,Business Accounting
-7,Business Operations
-8,Marketing
-9,Communications
-10,Communications Tech
-11,Computer Science
-12,Misc. Certifications
-13,Education
-14,Engineering
-15,Engineering Technology
-16,Language
-17,Healthcare
-18,More Healthcare
-19,Family and Home Ec
-20,Chidren and Homemaking
-21,
-22,Law
-23,English
-24,LAS
-25,Library Science
-26,Bilogy
-27,Math
-28,Military
-29,Multi-disciplinary
-30,
-31,
-32,
-33,
-34,
-35,
-36,
-37,
-38,
-39,
-40,
+family,my_cat1,my_cat2
+1,Agriculture,Agriculture
+2,Agriculture - Science Focus,Agriculture
+3,Natural Resources and Environmental Sciences,Physical Sciences
+4,Architecture,Architecture
+5,International and Group Studies,General+Multi+International
+6,Business Accounting,Business
+7,Business Operations,Business
+8,Marketing,Business
+9,Communications,Communications
+10,Communications Tech,Communications
+11,Computer Science,Computer Science
+12,Misc. Certifications,Misc. Certifications
+13,Education,Education
+14,Engineering,Engineering
+15,Engineering Technology,Trades and Technicians
+16,Language,Traditional Studies
+17,Healthcare,Healthcare
+18,More Healthcare,Healthcare
+19,Family and Home Ec,Family+Home Studies
+20,Chidren and Homemaking,Family+Home Studies
+22,Law,Traditional Studies
+23,English,Traditional Studies
+24,LAS,General+Multi+International
+25,Library Science,General+Multi+International
+26,Biology,Physical Sciences
+27,Math,Traditional Studies
+28,Military,Military
+29,Military Operations,Military
+30,Multi-disciplinary,General+Multi+International
+31,"Recreation, Sports, and Tourism","Recreation, Sports, and Tourism"
+38,Philosophy+Religion,Traditional Studies
+39,Being Religious,Divinity
+40,Physical Sciences,Physical Sciences
+41,Science Technologies/Technicians,Trades and Technicians
+42,Psychology,Social Sciences
+43,Criminology,Social Sciences
+44,Public Affairs,Public Policy
+45,Social Science,Social Sciences
+46,Construction Trades,Trades and Technicians
+47,Mechanics and Repairers,Trades and Technicians
+48,Precision Production Trades,Trades and Technicians
+49,Aeronautics and Aviation,Aviation
+50,Visual and Performing Arts,Arts
+51,Health Services and Health Sciences,Healthcare
+52,Management,Business
+54,History,Traditional Studies
