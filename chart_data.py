@@ -15,14 +15,14 @@ import matplotlib
 from bokeh.plotting import figure, output_file, show
 from bokeh.models import ColumnDataSource
 
-df = pd.read_csv('all_degrees_data.csv')
+df = pd.read_csv(r"C:\Users\.3\Desktop\degrees_data\IPEDS_data_work\all_degrees_data.csv")
 #df = df.astype(str)
 # removing the "all" categories still in the data
 df = df[df['CIPCODE'] != 99000]
 
-dfColors = pd.read_csv('big_color_list2.csv')
+dfColors = pd.read_csv(r"C:\Users\.3\Desktop\degrees_data\IPEDS_data_work\big_color_list2.csv")
 
-dfMap = pd.read_csv('degree_family_mapping_complete.csv')
+dfMap = pd.read_csv(r"C:\Users\.3\Desktop\degrees_data\IPEDS_data_work\degree_family_mapping_complete.csv")
 #dfMap = dfMap.astype(str)
 
 def year_fix(year):
@@ -52,6 +52,12 @@ df['fam2'] = [famDict2[x.upper()] for x in df['name'].values]
 df = df[df['name'] != 'Grand total']
 
 dfBach = df[df['AWLEVEL'] == 5]
+
+dfBach.to_csv(r'C:\Users\.3\Desktop\degrees_data\IPEDS_data_work\bachelors_degrees.csv', index=False)
+
+dfBach = dfBach[~dfBach['fam2'].isin(['Military', 'Misc. Certifications',
+                'Multi-disciplinary', 'Other Services'])]
+
 yearTotals = pd.pivot_table(dfBach, values = 'CTOTALT', index=['year2'],
                             aggfunc = np.sum)
 
